@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import RelayDemo from './RelayDemo'
 
 const GITHUB_REPO = 'https://github.com/reactjs/redux'
 
@@ -52,7 +53,10 @@ export default class Explore extends Component {
         <p>
           Move the DevTools with Ctrl+W or hide them with Ctrl+H.
         </p>
+        <hr />
+        <RelayDemo login={this.props.value} />
       </div>
+     
     )
   }
 }
