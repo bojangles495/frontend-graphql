@@ -2,12 +2,12 @@ import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
 const User = ({ user }) => {
-  const { login, avatarUrl, name } = user
+  const { login, avatarURL, name } = user;
 
   return (
     <div className="User">
       <Link to={`/${login}`}>
-        <img src={avatarUrl} alt={login} width="72" height="72" />
+        <img src={avatarURL} alt={login} width="72" height="72" />
         <h3>
           {login} {name && <span>({name})</span>}
         </h3>
@@ -19,7 +19,7 @@ const User = ({ user }) => {
 User.propTypes = {
   user: PropTypes.shape({
     login: PropTypes.string.isRequired,
-    avatarUrl: PropTypes.string.isRequired,
+    avatarURL: PropTypes.string.isRequired,
     name: PropTypes.string
   }).isRequired
 }
