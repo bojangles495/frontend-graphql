@@ -1,21 +1,11 @@
-import React, { PropTypes } from 'react'
-import { Provider } from 'react-redux'
+import React from 'react'
 import routes from '../routes'
-import DevTools from './DevTools'
 import { Router } from 'react-router'
 
-const Root = ({ store, history }) => (
-  <Provider store={store}>
+const Root = ({history}) => (
     <div>
       <Router history={history} routes={routes} />
-      <DevTools />
     </div>
-  </Provider>
 )
-
-Root.propTypes = {
-  store: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired
-}
 
 export default Root
